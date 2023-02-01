@@ -84,3 +84,33 @@ The project will be updated to use the [Spring-Boot](https://spring.io/projects/
 * Finally, the **pom.xml** file is updated to add dependencies for both **Spring Boot** and **Thymeleaf**.
 * The web application will be deployed also by **Maven** on a **Tomcat** server at the **localhost** at port **8080**.
     ![](images/sq2_6.jpg)
+
+## Testing the Web Application
+To test the web application, we have to
+1. Create  **test**, **test/java** and **test/java/com.ontariotechu.sofe3980U** folders within **src/** path.
+2. Copy the file **HelloControllerTest.java** from the GitHub to the path **src/test/java/com.ontariotechu.sofe3980U** within the project.
+    
+    ![](images/sq2_7.jpg)
+3. Remove the **junit** dependency and add the following dependencies to the pom file
+    ''' xml
+    <dependency>
+	<groupId>org.springframework.boot</groupId>
+	<artifactId>spring-boot-starter-test</artifactId>
+	<scope>test</scope>
+    </dependency>	
+    <dependency>
+	<groupId>org.springframework.boot</groupId>
+	<artifactId>spring-boot-devtools</artifactId>
+	<optional>true</optional>
+    </dependency>
+    ```
+    
+    ![](images/sq2_8.jpg)
+4. **HelloControllerTest.java** contains two test cases. Both look similar. So, Only the first case will be discussed here
+    * Line 34 : performs a **GET** request to the URL **/hello**.
+    * Line 35 : checks that the response is ok.
+    * Line 36 : checks that the response uses the **hello.html** template.
+    * Line 37 : checks that the attribute **name** within the template is set to the value **"World"**.
+    ![](images/sq2_9.jpg)
+5.	Run the test cases and deploy the web application
+mvn test spring-boot:run
