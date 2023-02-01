@@ -112,6 +112,7 @@ To test the web application, we have to
     
     ![](images/sq2_8.jpg)
 4. **HelloControllerTest.java** contains two test cases. Both look similar. So, Only the first case will be discussed here
+    * Line 25: specify the class to be tested.
     * Line 34 : performs a **GET** request to the URL **/hello**.
     * Line 35 : checks that the response is ok.
     * Line 36 : checks that the response uses the **hello.html** template.
@@ -150,3 +151,30 @@ The API controller works similar to the view Controller but it returns a data (s
     * [http://localhost:8080/emailAPI?fname=Abraham&lname=Lincoln](http://localhost:8080/emailAPI?fname=Abraham&lname=Lincoln)
     * [http://localhost:8080/emailAPI](http://localhost:8080/emailAPI) 
 
+## The Web Application of Binary Calculator
+* It’s time to set up the Binary Calculator. Copy **Binary.java**, **BinaryController.java**, **BinaryAPIResult.java** and **BinaryAPIController.java** from the **BinaryCalculator** folder in the repository to the path **src/main/java/com.ontariotechu.sofe3980U** within your project folder.
+* Copy **calculator.html**, **error.html**, and **result.html** from the **BinaryCalculator** folder within the repository to the path **src/main/resources/templates** within the project folder.
+* Copy **BinaryControllerTest.java** and **BinaryAPIControllerTest.Java** from the **BinaryCalculator** folder in the repository to the path **src/test/java/com.ontariotechu.sofe3980U** in your project folder.
+* Let’s try to understand how the binary calculator works.
+    1. It start by navigate to [http://localhost:8080](http://localhost:8080) . Thus , a **GET** request will be send to the URL **“/”**. This will be handled by the **getCalculator()** function defined at the **BinaryController** class.
+    2. The function shown in the figure below will display the view calculator. It can have one argument **operand1**. The value of **operand1** is used to set the first textbox in the view. If **operand1** is set, the second textbox will be focused. Otherwise, the first textbox will be focused. 
+        ![](images/sq2_14.jpg)
+    3. Pressing the **=** button, will submit the values of **operand1**, **operator**, and **operand2** using a **POST** method to the same URl **“/”**. The Post Request is mapped to a **getResult()** function defined at the **BinaryController** class. 
+    4. If the operator is invalid. The control will be directed to the **Error** view. However, The normal flow of the function is to calculate the result and display the **result** view. Note, only the **+** operator is implemented till now.
+        ![](images/sq2_15.jpg)
+    5. An example of the result view is shown. It got two links that will be customized to GET the URL **“/”** with suitable parameters. In this example, **New Operation** will be redirected to [http://localhost:8080](http://localhost:8080) while **Continue calculation** will be redirected to [http://localhost:8080/?operand1=10000](http://localhost:8080/?operand1=10000). This will returns us back to first step.
+ 
+* For the API services It’s implemented by BinaryAPIController.java. It has two functions to add binary functionsl one returns a string while the other returns a JSON object. Try the following URLs
+    * [http://localhost:8080/add?operand1=111&operand2=1010](http://localhost:8080/add?operand1=111&operand2=1010) 
+    * [http://localhost:8080/add_json?operand1=111&operand2=1010](http://localhost:8080/add_json?operand1=111&operand2=1010)	 
+* **BinaryControllerTest.java** contains three test cases for the Web application while **BinaryAPIControllerTest.Java** provides two test cases for the API service.
+
+## Design:
+* Add three more test cases for the binary web application.
+* Add three more test cases for the binary API service.
+* Implement other operators ( *, &, I) in both the web application and the API services. To do so, replace the Binary.java file with that you have implemented in the first milestone. You don’t need to update any HTML files. Only the java files should be updated.
+*  Add test cases for each newly implemented operations. The test cases should cover almost all possible cases.
+
+## Deliverables:
+1. A report consists of a summary of test cases, its target (class/function), and its purpose and a snap shot of the test summary provided by Maven. It should contain a link to a GitHub link for you project.
+2. An audiable video of about 5 minutes of the running application and service showing almost all available functionalities.   
