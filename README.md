@@ -116,6 +116,7 @@ To test the web application, we have to
 5. Run the test cases and deploy the web application
     ``` cmd
     mvn test spring-boot:run
+    ```
     
     ![](images/sq2_10.jpg)
-    ```
+
