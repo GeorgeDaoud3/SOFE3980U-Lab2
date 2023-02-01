@@ -120,3 +120,27 @@ To test the web application, we have to
     
     ![](images/sq2_10.jpg)
 
+## API Controller Using Spring Boot
+The API controller works similar to the view Controller but it returns a data (string or JSON) instead of a view (HTML). 
+1. Copy **HelloAPIController.java** and **APIResult.java** from the Github repository to the path **src/main/java/com.ontariotechu.sofe3980U**. As shown in the following figure, the API controller looks the same as the view controller except it uses **@RestController** instead of **@Controller**. It returns either a string as in line 13 or a JSON object ( represented by the APIResult object used in line 21) 
+    
+    ![](images/sq2_11.jpg)
+2. Copy **HelloAPIControllerTest.java** from the Github repository to the path **src/test/java/com.ontariotechu.sofe3980U**. It contains 6 test cases. Its test case is simpler than that of the view controller because there is no need for check the view or its parametes. The following figure shows 3 test cases.
+    * Line 39 : checks the output string of the API to be **"Hello World!"**
+    * Line 44: add a parameter to the GET Request similar to **/helloAPI?name=John**
+    * Line 53 : checks the value of **name** field within the JSON object to be **"John Doe"** where **$** represents the root of the JSON object.
+    
+    ![](images/sq2_12.jpg)
+3. Run the test case and deploy the web application
+    ``` cmd
+    mvn test spring-boot:run
+    ```
+ 
+4. Try the following URLs
+    * [http://localhost:8080/helloAPI](http://localhost:8080/helloAPI)
+    * [http://localhost:8080/helloAPI?name=Jack](http://localhost:8080/helloAPI?name=Jack)
+    * [http://localhost:8080/emailAPI?fname=Abraham] (http://localhost:8080/emailAPI?fname=Abraham) 
+    * [http://localhost:8080/emailAPI?lname=Lincoln](http://localhost:8080/emailAPI?lname=Lincoln) 
+    * [http://localhost:8080/emailAPI?fname=Abraham&lname=Lincoln](http://localhost:8080/emailAPI?fname=Abraham&lname=Lincoln)
+    * [http://localhost:8080/emailAPI](http://localhost:8080/emailAPI) 
+
