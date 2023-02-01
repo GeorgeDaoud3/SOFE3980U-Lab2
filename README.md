@@ -1,5 +1,5 @@
 # Milestone2: Implementing and Testing Web Application and API Service using Apache Maven and Spring Boot
-In this lab, you will be guided to build a web application and web service based on the Binary class you implemented in the first lab.
+You will be guided to build a web application and an API service based on the Binary class you implemented in the first milestone.
 ## Repository:
 [https://github.com/GeorgeDaoud3/SOFE3980U-Lab2](https://github.com/GeorgeDaoud3/SOFE3980U-Lab2)
 
