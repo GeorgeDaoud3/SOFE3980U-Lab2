@@ -19,6 +19,7 @@ You will be guided to build a web application and an API service based on the Bi
     	-DinteractiveMode=false
     ```
 * The command will generate a folder called **BinaryCalculatorWebapp**. The structure of the folder is shown in the following figure
+    
     ![](images/sq2_1.jpg)
     **index.jsp** is a java server page that generate a corresponding HTML file while **web.xml** is used to map an URL to the corresponding JSP file.
 *	Change the current directory to **BinaryCalculatorWebapp**.
@@ -61,10 +62,13 @@ The project will be updated to use the [Spring-Boot](https://spring.io/projects/
     mvn spring-boot:run
     ```
     The command will be running and blocking the command window as long as the web application needed to be run. If you want to stop it, press **Ctrl+C** (Don’t stop it right now).
+    
     ![](images/sq2_4.jpg) 
 * Open a web browser and navigate to the following URL: [http://localhost:8080/hello](http://localhost:8080/hello)
+    
     ![](images/sq2_5.jpg)
 * Now try to navigate to the following URL: [http://localhost:8080/hello?name=Doe](http://localhost:8080/hello?name=Doe)
+    
     ![](images/sq2_5a.jpg)
 
 ## Understanding Spring-Boot based Web application
@@ -83,6 +87,7 @@ The project will be updated to use the [Spring-Boot](https://spring.io/projects/
     3. **Thymeleaf** will regenerate the string in line 8 by replacing the value of **${name}** with the value of the **name** variable set by the model. That’s how **Hello Doe!** was displayed as a respond to  [http://localhost:8080/hello?name=Doe](http://localhost:8080/hello?name=Doe).
 * Finally, the **pom.xml** file is updated to add dependencies for both **Spring Boot** and **Thymeleaf**.
 * The web application will be deployed also by **Maven** on a **Tomcat** server at the **localhost** at port **8080**.
+    
     ![](images/sq2_6.jpg)
 
 ## Testing the Web Application
@@ -136,6 +141,7 @@ The API controller works similar to the view Controller but it returns a data (s
     mvn test spring-boot:run
     ```
  
+     ![](images/sq2_13.jpg)
 4. Try the following URLs
     * [http://localhost:8080/helloAPI](http://localhost:8080/helloAPI)
     * [http://localhost:8080/helloAPI?name=Jack](http://localhost:8080/helloAPI?name=Jack)
