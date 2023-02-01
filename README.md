@@ -145,7 +145,7 @@ The API controller works similar to the view Controller but it returns a data (s
 4. Try the following URLs
     * [http://localhost:8080/helloAPI](http://localhost:8080/helloAPI)
     * [http://localhost:8080/helloAPI?name=Jack](http://localhost:8080/helloAPI?name=Jack)
-    * [http://localhost:8080/emailAPI?fname=Abraham] (http://localhost:8080/emailAPI?fname=Abraham) 
+    * [http://localhost:8080/emailAPI?fname=Abraham](http://localhost:8080/emailAPI?fname=Abraham) 
     * [http://localhost:8080/emailAPI?lname=Lincoln](http://localhost:8080/emailAPI?lname=Lincoln) 
     * [http://localhost:8080/emailAPI?fname=Abraham&lname=Lincoln](http://localhost:8080/emailAPI?fname=Abraham&lname=Lincoln)
     * [http://localhost:8080/emailAPI](http://localhost:8080/emailAPI) 
