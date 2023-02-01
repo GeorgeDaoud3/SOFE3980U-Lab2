@@ -111,6 +111,11 @@ To test the web application, we have to
     * Line 35 : checks that the response is ok.
     * Line 36 : checks that the response uses the **hello.html** template.
     * Line 37 : checks that the attribute **name** within the template is set to the value **"World"**.
+    
     ![](images/sq2_9.jpg)
-5.	Run the test cases and deploy the web application
-mvn test spring-boot:run
+5. Run the test cases and deploy the web application
+    ``` cmd
+    mvn test spring-boot:run
+    
+    ![](images/sq2_10.jpg)
+    ```
