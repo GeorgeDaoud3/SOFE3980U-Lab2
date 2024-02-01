@@ -23,7 +23,7 @@ You will be guided to build a web application and an API service based on the Bi
 	![](images/sq2_1.jpg)
   
 	**index.jsp** is a java server page that generate a corresponding HTML file while **web.xml** is used to map an URL to the corresponding JSP file.
-*	Change the current directory to **BinaryCalculatorWebapp**.
+* Change the current directory to **BinaryCalculatorWebapp**.
     ``` cmd
     cd BinaryCalculatorWebapp
     ```
@@ -32,20 +32,21 @@ The project will be updated to use the [Spring-Boot](https://spring.io/projects/
 * Create the following folder and subfolder **java** and **java/com.ontariotechu.sofe3980U** within **src/main/** folder.
 * Copy the two files named **HelloController.java** and **Application.java** from the GitHub repository to the path **src/main/java/com.ontariotechu.sofe3980U** in your project.
 * Create a folder named **templates** within the **src/main/resources/** folder in your project folder and copy the file named **hello.html** from the GitHub repository to the path **src/main/java/sources/templates** in the project.
-*	The overall project folder should look like this:
+* The overall project folder should look like this:
     
-    ![](images/sq2_2.jpg)
-*	Update the pom.xml file to include the following properties before the dependencies tag.  The **parent** tag provides a shared configuration of the spring boot dependencies (you can download the final version of **pom.xml** from the GitHub repository).
-    ``` xml
+  	![](images/sq2_2.jpg)
+  
+* Update the pom.xml file to include the following properties before the dependencies tag.  The **parent** tag provides a shared configuration of the spring boot dependencies (you can download the final version of **pom.xml** from the GitHub repository).
+	``` xml
     <parent>
     	<groupId>org.springframework.boot</groupId>
     	<artifactId>spring-boot-starter-parent</artifactId>
     	<version>2.1.2.RELEASE</version>
 	    <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    ```
-    and also, the following dependencies 
-    ``` xml
+	```
+	and also, the following dependencies 
+	``` xml
     <dependency>
     	<groupId>org.springframework.boot</groupId>
     	<artifactId>spring-boot-starter-web</artifactId>
@@ -54,21 +55,24 @@ The project will be updated to use the [Spring-Boot](https://spring.io/projects/
     	<groupId>org.springframework.boot</groupId>
     	<artifactId>spring-boot-starter-thymeleaf</artifactId>
     </dependency>	
-    ```
-    The updated pom file should look like
+	```
+	The updated pom file should look like
     
-    ![](images/sq2_3.jpg)
-*	To run the application, run the following command
-    ``` cmd
+	![](images/sq2_3.jpg)
+
+* To run the application, run the following command
+	``` cmd
     mvn spring-boot:run
-    ```
-    The command will be running and blocking the command window as long as the web application needed to be run. If you want to stop it, press **Ctrl+C** (Don’t stop it right now).
+	```
+	The command will be running and blocking the command window as long as the web application needed to be run. If you want to stop it, press **Ctrl+C** (Don’t stop it right now).
     
-    ![](images/sq2_4.jpg) 
+	![](images/sq2_4.jpg) 
+
 * Open a web browser and navigate to the following URL: [http://localhost:8080/hello](http://localhost:8080/hello)
     
-    ![](images/sq2_5.jpg)
-* Now try to navigate to the following URL: [http://localhost:8080/hello?name=Doe](http://localhost:8080/hello?name=Doe)
+ 	![](images/sq2_5.jpg)
+  
+* Now try to navigate to the another URL: [http://localhost:8080/hello?name=Doe](http://localhost:8080/hello?name=Doe)
     
     ![](images/sq2_5a.jpg)
 
