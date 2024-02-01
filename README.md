@@ -10,14 +10,14 @@ You will be guided to build a web application and an API service based on the Bi
 
 ## Create a WebApp Project
 * You can create a web application project using Jenkins from the maven-archetype-webapp template (**DarchetypeArtifactId**) by running the following command in the command window in the path you want to generate the project in.
-    ``` cmd
+	``` cmd
     mvn archetype:generate ^
     	-DgroupId=com.ontariotechu.sofe3980U ^
     	-DartifactId=Webapp ^
     	-Dversion=1.0.0 ^
     	-DarchetypeArtifactId=maven-archetype-webapp ^
     	-DinteractiveMode=false
-    ```
+	```
 * The command will generate a folder called **BinaryCalculatorWebapp**. The structure of the folder is shown in the following figure
     
 	![](images/sq2_1.jpg)
