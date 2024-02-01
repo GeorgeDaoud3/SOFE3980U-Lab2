@@ -166,11 +166,11 @@ The API controller works similar to the view Controller but it returns a data (s
 * Copy **BinaryControllerTest.java** and **BinaryAPIControllerTest.Java** from the **BinaryCalculator** folder in the repository to the path **src/test/java/com.ontariotechu.sofe3980U** in your project folder.
 * Let’s try to understand how the binary calculator works.
 	1. It start by navigate to [http://localhost:8080](http://localhost:8080) . Thus , a **GET** request will be send to the URL **“/”**. This will be handled by the **getCalculator()** function defined at the **BinaryController** class.
-	2. The function shown in the figure below will display the view calculator. It can have one argument **operand1**. The value of **operand1** is used to set the first textbox in the view. If **operand1** is set, the second textbox will be focused. Otherwise, the first textbox will be focused. 
+	2. The function shown in the figure below will display the view calculator. It can have one argument **operand1**. The value of **operand1** is used to set the first textbox in the view. If **operand1** is set, the second textbox will be focused. Otherwise, the first textbox will be focused. This is controlled by the Boolean variable namely **operand1Focused** .
 
   		![](images/sq2_14.jpg)
 
-	3. Pressing the **=** button, will submit the values of **operand1**, **operator**, and **operand2** using a **POST** method to the same URl **“/”**. The Post Request is mapped to a **getResult()** function defined at the **BinaryController** class. 
+	3. Pressing the **=** button, will submit the values of **operand1**, **operator**, and **operand2** using a **POST** method to the same URl **“/”**. The Post Request is mapped to the **getResult()** function defined in the same class (**BinaryController**). 
 	4. If the operator is invalid. The control will be directed to the **Error** view. However, The normal flow of the function is to calculate the result and display the **result** view. Note, only the **+** operator is implemented till now.
 
 		![](images/sq2_15.jpg)
