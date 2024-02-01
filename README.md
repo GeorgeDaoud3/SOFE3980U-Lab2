@@ -105,18 +105,19 @@ To test the web application, we have to
 3. Remove the **junit** dependency and add the following dependencies to the pom file
 	``` xml
     <dependency>
-	<groupId>org.springframework.boot</groupId>
-	<artifactId>spring-boot-starter-test</artifactId>
-	<scope>test</scope>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-test</artifactId>
+		<scope>test</scope>
     </dependency>	
     <dependency>
-	<groupId>org.springframework.boot</groupId>
-	<artifactId>spring-boot-devtools</artifactId>
-	<optional>true</optional>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-devtools</artifactId>
+		<optional>true</optional>
     </dependency>
 	```
     
     ![](images/sq2_8.jpg)
+
 4. **HelloControllerTest.java** contains two test cases. Both look similar. So, Only the first case will be discussed here
     * Line 25: specify the class to be tested.
     * Line 34 : performs a **GET** request to the URL **/hello**.
