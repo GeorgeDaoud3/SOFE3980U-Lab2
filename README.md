@@ -102,7 +102,7 @@ To test the web application, we have to
     
     ![](images/sq2_7.jpg)
    
-3. Remove the **junit** dependency and add the following dependencies to the pom file
+3. Remove the default **junit** dependency and add the following dependencies to the pom file
 	``` xml
     <dependency>
 		<groupId>org.springframework.boot</groupId>
