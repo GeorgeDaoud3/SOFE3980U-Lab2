@@ -118,20 +118,21 @@ To test the web application, we have to
     
     ![](images/sq2_8.jpg)
 
-4. **HelloControllerTest.java** contains two test cases. Both look similar. So, Only the first case will be discussed here
-    * Line 25: specify the class to be tested.
-    * Line 34 : performs a **GET** request to the URL **/hello**.
-    * Line 35 : checks that the response is ok.
-    * Line 36 : checks that the response uses the **hello.html** template.
-    * Line 37 : checks that the attribute **name** within the template is set to the value **"World"**.
-    
-    ![](images/sq2_9.jpg)
+4. **HelloControllerTest.java** contains two test cases. Both look similar. So, Only the first case will be explained here
+	* Line 25: specify the class to be tested.
+	* Line 34 : performs a **GET** request to the URL **/hello**.
+	* Line 35 : checks that the response is ok.
+	* Line 36 : checks that the response uses the **hello.html** template.
+	* Line 37 : checks that the attribute **name** within the template is set to the value **"World"**.
+	
+	![](images/sq2_9.jpg)
+   
 5. Run the test cases and deploy the web application
-    ``` cmd
-    mvn test spring-boot:run
-    ```
-    
-    ![](images/sq2_10.jpg)
+	``` cmd
+	mvn test spring-boot:run
+	```
+	
+	![](images/sq2_10.jpg)
 
 ## API Controller Using Spring Boot
 The API controller works similar to the view Controller but it returns a data (string or JSON) instead of a view (HTML). 
