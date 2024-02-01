@@ -13,7 +13,7 @@ You will be guided to build a web application and an API service based on the Bi
 	``` cmd
     mvn archetype:generate ^
     	-DgroupId=com.ontariotechu.sofe3980U ^
-    	-DartifactId=Webapp ^
+    	-DartifactId=BinaryCalculatorWebapp ^
     	-Dversion=1.0.0 ^
     	-DarchetypeArtifactId=maven-archetype-webapp ^
     	-DinteractiveMode=false
