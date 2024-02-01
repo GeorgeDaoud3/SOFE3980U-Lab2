@@ -160,7 +160,7 @@ The API controller works similar to the view Controller but it returns a data (s
     * [http://localhost:8080/emailAPI?fname=Abraham&lname=Lincoln](http://localhost:8080/emailAPI?fname=Abraham&lname=Lincoln)
     * [http://localhost:8080/emailAPI](http://localhost:8080/emailAPI) 
 
-## The Web Application of Binary Calculator
+## Binary Calculator Web Application
 * It’s time to set up the Binary Calculator. Copy **Binary.java**, **BinaryController.java**, **BinaryAPIResult.java** and **BinaryAPIController.java** from the **BinaryCalculator** folder in the repository to the path **src/main/java/com.ontariotechu.sofe3980U** within your project folder.
 * Copy **calculator.html**, **error.html**, and **result.html** from the **BinaryCalculator** folder within the repository to the path **src/main/resources/templates** within the project folder.
 * Copy **BinaryControllerTest.java** and **BinaryAPIControllerTest.Java** from the **BinaryCalculator** folder in the repository to the path **src/test/java/com.ontariotechu.sofe3980U** in your project folder.
