@@ -78,18 +78,18 @@ The project will be updated to use the [Spring-Boot](https://spring.io/projects/
 
 ## Understanding the Spring-Boot based Web application
 * **Application.java** contains the **main** function that runs the web application
-* **HelloController.java** is a view controller that redirects a HTTP request to a template HTML file to generate a customized HTML file.
-* The first file in the following figure shows **HelloController.java**. 
+* **HelloController.java** is a view controller that redirects an HTTP request to the HTML template file to generate a customized HTML file.
+* The first file in the following figure shows **HelloController.java** in which 
 	1. The **HelloController** class is defined after **@controller** annotation to indicate that it implements an view controller (Model–view–controller or MVC) that will respond by an Html page.
 	2. **@GetMapping("/hello")** annotation indicates that the following function will be a handler to a **GET** request sent to the URL **/hello** ([http://localhost:8080/hello](http://localhost:8080/hello)).
 	3. **@RequestParam** defines an argument that can be sent via the **GET** method. In this example, the argument is called **name**. It’s optional with a default value of **"World"**. Its value can be set by the URL as [http://localhost:8080/hello?name=Doe](http://localhost:8080/hello?name=Doe). 
 	4. The value of the **GET** parameter will be handled by a java variable named **name**.
-	5. **Model.addAttribute** is used to send a value (the second argument) from the java function to a variable (first argument) in the HTML template.
+	5. **Model.addAttribute** is used to send a value (the second argument) from the java code to a variable (first argument) in the HTML template.
 	6. The return value is the name of the html template file to be sent back as a response to the **GET** request. As it returns **"hello"**, the file **src/main/java/resources/templates/hello.html** will be used as a template to create the response.
-* To use the HTML file as a template and uses the set variable to customize the view of the HTML file, Spring Boot uses **Thymeleaf**. It’s a modern server-side Java template engine. Taking the file  **src/main/java/sources/templates/hello.html** shown in the figure as example. when edited, it looks like a normal HTML file except:
-    1. In the **html** tag, it has a reference to **Thymeleaf**.
-    2. Each attribute that will be updated by Thymeleaf will be appended by **th:**. For example, the **text** attribute is replaced by **th:text** in line 8. 
-    3. **Thymeleaf** will regenerate the string in line 8 by replacing the value of **${name}** with the value of the **name** variable set by the model. That’s how **Hello Doe!** was displayed as a respond to  [http://localhost:8080/hello?name=Doe](http://localhost:8080/hello?name=Doe).
+* Spring Boot uses **Thymeleaf** to set the **name** variable to customize the view of the HTML file. **Thymeleaf** is considered a modern server-side Java template engine. When editing the  **src/main/java/sources/templates/hello.html** file (as shown at the bottom of the following figure), it looks like a normal HTML file except:
+	1. In the **html** tag, it has a reference to **Thymeleaf**.
+	2. Each attribute that will be updated by Thymeleaf will be prepended by **th:**. For example, the **text** attribute is replaced by **th:text** in line 8. 
+	3. **Thymeleaf** will regenerate the string in line 8 by replacing the value of **${name}** with the value of the **name** variable set by the JAVA model. That’s how **Hello Doe!** was displayed as a respond to  [http://localhost:8080/hello?name=Doe](http://localhost:8080/hello?name=Doe).
 * Finally, the **pom.xml** file is updated to add dependencies for both **Spring Boot** and **Thymeleaf**.
 * The web application will be deployed also by **Maven** on a **Tomcat** server at the **localhost** at port **8080**.
     
@@ -101,6 +101,7 @@ To test the web application, we have to
 2. Copy the file **HelloControllerTest.java** from the GitHub to the path **src/test/java/com.ontariotechu.sofe3980U** within the project.
     
     ![](images/sq2_7.jpg)
+   
 3. Remove the **junit** dependency and add the following dependencies to the pom file
     ``` xml
     <dependency>
