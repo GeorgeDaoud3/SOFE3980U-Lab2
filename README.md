@@ -175,7 +175,7 @@ The API controller works similar to the view Controller but it returns a data (s
 
 		![](images/sq2_15.jpg)
 
-  	5. An example of the result view is shown. It got two links that will be customized to GET the URL **“/”** with suitable parameters. In this example, **New Operation** will be redirected to [http://localhost:8080](http://localhost:8080) while **Continue calculation** will be redirected to [http://localhost:8080/?operand1=10000](http://localhost:8080/?operand1=10000). This will returns us back to first step.
+  	5. An example of the result view is shown. It got two links that will be customized to GET the URL **“/”** with suitable parameters. In this example, **New Calculation** will be redirected to [http://localhost:8080](http://localhost:8080) while **Continue Calculation** will be redirected to [http://localhost:8080/?operand1=10000](http://localhost:8080/?operand1=10000). This will returns us back to first step.
  
 * For the API services It’s implemented by BinaryAPIController.java. It has two functions to add binary functionsl one returns a string while the other returns a JSON object. Try the following URLs
 	* [http://localhost:8080/add?operand1=111&operand2=1010](http://localhost:8080/add?operand1=111&operand2=1010) 
