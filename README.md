@@ -10,7 +10,7 @@ In the previous milestone, you got some experience with using Maven. In this mil
 3. Learn how to use Spring Boot to build and test API service.
 
 ## Create a WebApp Project
-* You can create a web application project using Jenkins from the maven-archetype-webapp template (**DarchetypeArtifactId**) by running the following command in the command window in the path you want to generate the project in.
+* You can create a web application project using the maven-archetype-webapp template (**DarchetypeArtifactId**) by running the following command in the command window in the path you want to generate the project in.
 	``` cmd
     mvn archetype:generate ^
     	-DgroupId=com.ontariotechu.sofe3980U ^
