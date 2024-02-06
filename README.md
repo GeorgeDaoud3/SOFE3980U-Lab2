@@ -21,8 +21,9 @@ You will be guided to build a web application and an API service based on the Bi
 * The command will generate a folder called **BinaryCalculatorWebapp**. The structure of the folder is shown in the following figure
     
     ![](images/sq2_1.jpg)
+
     **index.jsp** is a java server page that generate a corresponding HTML file while **web.xml** is used to map an URL to the corresponding JSP file.
-*	Change the current directory to **BinaryCalculatorWebapp**.
+* Change the current directory to **BinaryCalculatorWebapp**.
     ``` cmd
     cd BinaryCalculatorWebapp
     ```
