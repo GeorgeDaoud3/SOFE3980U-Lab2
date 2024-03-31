@@ -21,9 +21,9 @@ In the previous milestone, you got some experience with using Maven. In this mil
 	```
 * The command will generate a folder called **BinaryCalculatorWebapp**. The structure of the folder is shown in the following figure
     
-	![](images/sq2_1.jpg)
-  
-	**index.jsp** is a java server page that generate a corresponding HTML file while **web.xml** is used to map an URL to the corresponding JSP file.
+    ![](images/sq2_1.jpg)
+
+    **index.jsp** is a java server page that generate a corresponding HTML file while **web.xml** is used to map an URL to the corresponding JSP file.
 * Change the current directory to **BinaryCalculatorWebapp**.
     ``` cmd
     cd BinaryCalculatorWebapp
